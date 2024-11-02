@@ -8,7 +8,7 @@ function Sidebar({ children }) {
   const [expend, setexpend] = useState(true);
   return (
     <SidebarContext.Provider value={{ expend }}>
-      <aside className="h-screen ">
+      <aside className="h-screen"> 
         <nav className="h-full flex flex-col bg-white border-r shadow-sm">
           <div className="p-4 flex justify-between items-center">
             <img

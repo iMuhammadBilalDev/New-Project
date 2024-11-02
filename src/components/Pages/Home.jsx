@@ -1,80 +1,49 @@
 import React from 'react';
-import Welcome from '../../assets/welcome.png';
+import { Link } from 'react-router-dom'; // Assuming you're using React Router
+
 const Home = () => {
   return (
-    <div className="bg-gray-100">
-      <section className="bg-white">
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between py-16 px-4 md:px-12">
-          <div className="w-full md:w-1/2">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              Welcome to Our Professional Service
-            </h1>
-            <p className="text-lg text-gray-600 mb-6  ">
-              We offer top-notch solutions to help you grow your business and reach your goals. Our team of experts is here to support you every step of the way.
-            </p>
-            <a
-              href="#"
-              className="inline-block bg-blue-600 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 transition duration-200"
-            >
-              Learn More
-            </a>
-          </div>
-          <div className="w-full md:w-1/2 mt-8 md:mt-0">
-            <img
-              src={Welcome}
-              alt="Professional Services"
-              className="rounded-lg shadow-lg"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-gray-100 py-16">
-        <div className="container mx-auto px-4 md:px-12">
-          <h2 className="text-3xl font-bold text-gray-800 text-center mb-12">Our Key Features</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Feature 1 */}
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-             
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Innovative Solutions</h3>
-              <p className="text-gray-600">
-                We provide creative and effective solutions tailored to your needs.
-              </p>
-            </div>
-
-            {/* Feature 2 */}
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Expert Team</h3>
-              <p className="text-gray-600">
-                Our experienced team ensures high-quality service and customer satisfaction.
-              </p>
-            </div>
-
-            {/* Feature 3 */}
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">24/7 Support</h3>
-              <p className="text-gray-600">
-                We are here to assist you round-the-clock with any issues or concerns.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-blue-50 to-blue-100 text-gray-800 px-6 py-12">
       
-      <footer className="bg-gray-800 text-white py-8">
-        <div className="container mx-auto px-4 md:px-12">
-          <div className="text-center">
-            <div className="flex justify-center space-x-4 mt-4">
-              <a href="#" className="hover:text-gray-400">Privacy Policy</a>
-              <a href="#" className="hover:text-gray-400">Terms of Service</a>
-              <a href="#" className="hover:text-gray-400">Contact Us</a>
-            </div>
-          </div>
+      {/* Hero Section */}
+      <section className="text-center space-y-6">
+        <h1 className="text-5xl font-bold text-gray-900 animate-fade-in-up">Welcome! I’m Muhammad Bilal</h1>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto animate-fade-in-up delay-150">
+          A passionate Frontend Developer based in Pakistan, dedicated to crafting high-quality, user-centric web applications using the latest technologies.
+        </p>
+        
+        {/* CTA Buttons */}
+        <div className="mt-8 space-x-4 animate-fade-in-up delay-300">
+          <Link
+            to="/about"
+            className="px-6 py-3 bg-blue-500 text-white rounded-lg font-medium shadow-md hover:shadow-lg hover:bg-blue-600 transition duration-200 transform hover:scale-105"
+          >
+            Learn More About Me
+          </Link>
+          <Link
+            to="/contact"
+            className="px-6 py-3 bg-gray-200 text-gray-700 rounded-lg font-medium shadow-md hover:shadow-lg hover:bg-gray-300 transition duration-200 transform hover:scale-105"
+          >
+            Get in Touch
+          </Link>
         </div>
-      </footer>
+      </section>
+
+      {/* Skills Section */}
+      <section className="grid gap-8 sm:grid-cols-3 mt-16">
+        <div className="p-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105">
+          <h3 className="text-xl font-semibold text-gray-800">JavaScript</h3>
+          <p className="text-gray-600">Building interactive, performant web interfaces with modern JavaScript.</p>
+        </div>
+        <div className="p-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105">
+          <h3 className="text-xl font-semibold text-gray-800">React.js</h3>
+          <p className="text-gray-600">Creating scalable, high-performance applications with React.</p>
+        </div>
+        <div className="p-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105">
+          <h3 className="text-xl font-semibold text-gray-800">Firebase</h3>
+          <p className="text-gray-600">Developing real-time applications using Firebase for backend services.</p>
+        </div>
+      </section>
     </div>
   );
 };

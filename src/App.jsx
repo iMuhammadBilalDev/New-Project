@@ -8,11 +8,19 @@ import Home from './components/Pages/Home';
 import Dashboard from './components/Pages/Dashboard';
 import Projects from './components/Pages/Projects';
 import Calendar from './components/Pages/Calendar';
+import About from './components/Pages/About';
+import Services from './components/Pages/Service';
+import Contact from './components/Pages/Contact';
+import TaskPage from './components/Pages/Task';
+import ReportingPage from './components/Pages/Reporting';
+import SettingsPage from './components/Sitting';
+import HelpPage from './components/Pages/Helpme';
 
 function App() {
   return (
     
     <Router>
+      
       <Navbar />
       <div className='flex'>
         <Sidebar>
@@ -49,14 +57,13 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/calendar" element={<Calendar />} />
-            <Route path="/task" element={<div>Task Page</div>} />
-            <Route path="/reporting" element={<div>Reporting Page</div>} />
-            <Route path="/settings" element={<div>Settings Page</div>} />
-            <Route path="/help" element={<div>Help Page</div>} />
-            <Route path="/about" element={<div>About page</div>} />
-            <Route path="/contact" element={<div>Contact Page</div>} />
-            <Route path="/settings" element={<div>Settings Page</div>} />
-            <Route path="/service" element={<div>Service Page</div>} />
+            <Route path="/task" element={<TaskPage />} />
+            <Route path="/reporting" element={<ReportingPage />} />
+            <Route path="/settings" element={<SettingsPage />} />
+            <Route path="/help" element={<HelpPage />} />
+            <Route path="/about" element={ <About />} />
+            <Route path="/contact" element={<Contact/>} />
+            <Route path="/service" element={<Services/>} />
           </Routes>
         </div>
       </div>
